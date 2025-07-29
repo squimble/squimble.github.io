@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <title>airplane builder</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+    <style>
+      .button {
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #6279a7;
+}
+
+.button1:hover {
+  background-color: #6279a7;
+  color: white;
+}
+.button2 {
+        background-color: white;
+        color: black;
+        border: 2px solid green;
+      }
+      .button2:hover {
+        background-color:green;
+        color:white
+      }
+.button3 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #f44336;
+}
+
+.button3:hover {
+  background-color: #f44336;
+  color: white;
+}
+      .button4 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #ffdb77;
+}
+
+.button4:hover {
+  background-color: #ffdb77;
+  color: #003366;
+}
+         .button5 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid orange;
+}
+
+.button5:hover {
+  background-color: orange;
+  color: #003366;
+}   
+               .button6 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #003366;
+}
+
+.button6:hover {
+  background-color: #003366;
+  color: white;
+} 
+      .credits {
+        color:#003366
+      }
+    </style>
+  </head>
+  <body>
+    
+<details>
+    <summary>
+                <b id="count">0 Airplanes</b>
+                <span class="icon">
+                    <b>[expand/contract]</b>
+                </span>
+     
+            </summary>
+   <p id="cessna150">
+        0 Cessna 150s
+      </p>
+   <p id="cessna172">
+        0 Cessna 172s
+      </p>
+  <p id="dhc6">
+        0 DHC-6 Twin Otters
+      </p>
+    </details>
+<b id="points">0 Points</b>
+<b id="rdp">0 R&D Points</b>
+  <p2 id="wings">0 Wings</p2>
+    <p3 id="fuselage">0 Fuselages</p3>
+    <p4 id="engine">0 Engines</p4>
+    <button onclick="wing()"class="button button1" id="wing">
+     Make 1 Wing
+    </button>
+    <button onclick="fuselage()" class="button button1" id="fuselage2">
+     Make 1 Fuselage
+    </button>
+    <button onclick="engine()" class="button button1" id="engine2">
+     Make 1 Engine
+    </button>
+    <br>
+    <button onclick="cessna150()" class="button button2" id="cessna">
+      Make a Cessna 150 
+    </button>
+    <button onclick="sell()" class="button button3" id="sell">
+      Sell your Aircraft for 0 points
+    </button>
+    <button onclick="wingfactory()" class="button button4" id="wingfactory">
+      Buy a Wing Factory for 10 points
+    </button>
+    <button onclick="ffactory()" class="button button4" id="ffactory">
+      Buy a Fuselage Factory for 10 points
+    </button>
+    <button onclick="enginefactory()" class="button button4" id="enginefactory">
+      Buy an Engine Factory for 10 points
+    </button>
+    <br>
+    <button onclick="cessna150f()" class="button button4" id="cessna150f">
+      Buy a Cessna 150 Factory for 25 points
+    </button>
+    <button onclick="unlockC172()" class="button button5" id="c172">
+      Unlock the Cessna 172 for 250 Cessna 150s
+    </button>
+    <button style="display:none" onclick="upgrade1()" class="button button6" id="upgrade1">
+      Upgrade engine to Level 2 for 200 points
+    </button>
+    <button style="display:none" onclick="cessna172()" class="button button2" id="172cessna">
+      Make a Cessna 172 using 2 wings, 1 fuselage, and one Level 2 engine.
+    </button>
+    <button style="display:none" onclick="c172f()" class="button button4" id="c172f">
+      Buy a Cessna 172 Factory for 150 points
+    </button>
+    <br>
+    <button style="display:none" onclick="upgradewing()" class="button button6" id="upwing">
+      Upgrade wings to level 2 for 200 points.
+    </button>
+    <button style="display:none" onclick="unlockDHC6()" class="button button5" id="uDHC6">
+      Unlock the DHC-6 Twin Otter and R&D Lab for 500 Cessna 172s, and 600 Cessna 150s
+    </button>
+    <button style="display:none" onclick="dhc6()" class="button button2" id="otter">
+      Make a DHC-6 Twin Otter with 2 Level 2 wings, 1 fuselage, and 2 level 3 engines.
+    </button>
+    <br>
+    <h1 style="display:none" id="RD">
+      R&D Lab
+    </h1>
+    
+    <button style="display:none" onclick="send2RD()" class="button button3" id="send">
+      Send all planes to R&D for points
+    </button>
+    <h2 style="display:none" id="research">
+      Research Department
+    </h2>
+   <ul style="display:none" id="tech">
+     <li><span class="caret"><button class="button button6" onclick="utech">
+       Unlock tech tree for 1500 R&D Points
+       </button></span> </li>
+    </ul>
+    <marquee>First Public Beta!</marquee>
+    <p>
+      Thank you for trying out my public beta test! <br> I worked extremely hard to bring the CSS restyling and adding the DHC-6 Twin Otter!
+    </p>
+    <p class="credits">
+      By Dylan Weinrich
+    </p>
+  </body>
+</html>
