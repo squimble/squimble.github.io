@@ -16,7 +16,13 @@ body {
   font-family: sans-serif;
   line-height: 1.5;
 }
-
+.horizontal-center {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
 /* images and videos max out at full width */
 img,
 video {
