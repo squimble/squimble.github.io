@@ -17,11 +17,8 @@ body {
   line-height: 1.5;
 }
 .horizontal-center {
-  margin: 0;
-  position: absolute;
-  left: 50%;
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
+ display: block; /* Important: Make the button a block-level element */
+  margin: 0 auto; /* Centers horizontally */
 }
 /* images and videos max out at full width */
 img,
