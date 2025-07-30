@@ -288,7 +288,14 @@ window.setInterval(function(){
    }
  }
 })
-var savegame = JSON.parse(localStorage.getItem("gameData"))
+var saveGameLoop = window.setInterval(function() {
+  localStorage.setItem("planes", JSON.stringify(gameData))
+
+  if (isNaN(saveData.aQuantity)) {
+  saveData.aQuantity = 0; // Set a default value
+  }
+
+var savegame = JSON.parse(localStorage.getItem("planes"))
 
 if (saveGame !== null) {
   gameData = saveGame
