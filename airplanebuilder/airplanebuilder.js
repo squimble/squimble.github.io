@@ -221,7 +221,7 @@ function send2RD(){
   document.getElementById("dhc6").innerHTMl= gameData.DHC6+" DHC-6 Twin Otters"
 }
 window.setInterval(function(){
-  document.getElementById("send").innerHTML= "Send all Aircraft to the R&D Lab for "+((gameData.cessna172*2)+gameData.cessna150)+" R&D Points"
+  document.getElementById("send").innerHTML= "Send all Aircraft to the R&D Lab for "+((gameData.cessna172*2)+gameData.cessna150+(gameData.DHC6*3))+" R&D Points"
   
   
 })
