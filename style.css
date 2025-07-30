@@ -9,19 +9,7 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
-.wobble-text > span {
-    display: inline-block; /* Essential for transform properties to work */
-    animation: wobble 0.5s infinite alternate; /* Adjust duration, iteration count, and direction as needed */
-}
 
-@keyframes wobble {
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(5deg); }
-    50% { transform: rotate(-5deg); }
-    75% { transform: rotate(2deg); }
-    100% { transform: rotate(0deg); }
-}
-/* adjust typography defaults */
 body {
   margin: 1rem;
   font-family: sans-serif;
