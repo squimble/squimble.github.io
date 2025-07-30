@@ -9,7 +9,18 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+.wobble-text > span {
+    display: inline-block; /* Essential for transform properties to work */
+    animation: wobble 0.5s infinite alternate; /* Adjust duration, iteration count, and direction as needed */
+}
 
+@keyframes wobble {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(-5deg); }
+    75% { transform: rotate(2deg); }
+    100% { transform: rotate(0deg); }
+}
 /* adjust typography defaults */
 body {
   margin: 1rem;
@@ -26,18 +37,7 @@ video {
   height: auto;
   max-width: 100%;
 }
-.wobble-text {
-    font-size: 3em; /* Adjust as needed */
-    animation: wobble 0.8s infinite alternate; /* Name, duration, iteration, direction */
-}
 
-@keyframes wobble {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(5px); }
-    50% { transform: translateX(-5px); }
-    75% { transform: translateX(5px); }
-    100% { transform: translateX(0); }
-}
 .open-sans-<uniquifier> {
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
