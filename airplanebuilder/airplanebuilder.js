@@ -288,3 +288,8 @@ window.setInterval(function(){
    }
  }
 })
+var savegame = JSON.parse(localStorage.getItem("gameData"))
+
+if (saveGame !== null) {
+  gameData = saveGame
+}          
