@@ -25,6 +25,7 @@ var gameData={
   RDPoints:0,
   DHC6:0
 }
+/* guygutfyrvcgbhrtxcf gvfd6re5ctfvgbuy765dectfvgbygtfvgbh please commit*/
 function wing(){
   gameData.wings+=1
   document.getElementById("wings").innerHTML = gameData.wings+" Wings"
