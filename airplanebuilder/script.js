@@ -291,7 +291,7 @@ window.setInterval(function(){
 })
 var saveGameLoop = window.setInterval(function() {
   localStorage.setItem("planes", JSON.stringify(gameData))
-
+}
   if (isNaN(saveData.aQuantity)) {
   saveData.aQuantity = 0; // Set a default value
   }
