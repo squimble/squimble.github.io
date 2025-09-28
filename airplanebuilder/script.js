@@ -201,7 +201,7 @@ function unlockDHC6(){
     document.getElementById("upwing").style.display="inline"
     document.getElementById("otter").style.display="inline"
     document.getElementById("utech").style.display="inline"
-    document.getElementById("unlocktree").style.display="inline"  
+    document.getElementById("unlocktree").style.display="inline-block"  
     gameData.cessna172-=500
     gameData.cessna150-=600
     gameData.airplanes-=1100
