@@ -34,7 +34,7 @@ function fireE(){
   
 }
 //sorry guys its for aesthetic
-const canvas = document.getElementById("pointCanvas");
+const canvas = document.getElementById("photonss");
 const ctx = canvas.getContext('2d');
 
 // Set canvas dimensions
