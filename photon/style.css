@@ -1,1 +1,25 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
 
+.sidebar-container {
+    width: 200px; /* Set the width of your sidebar */
+    position: fixed; /* Fixes the sidebar to the viewport */
+    right: 0; /* Positions the sidebar on the right */
+    top: 0;
+    height: 100%; /* Makes the sidebar full height */
+    background-color: #333;
+    overflow: hidden; /* Hides points that go outside the canvas area */
+}
+
+.main-content {
+    margin-right: 200px; /* Same width as sidebar to prevent overlap */
+    padding: 20px;
+    /* Added height for demonstration purposes */
+    min-height: 150vh; 
+}
+
+#pointsCanvas {
+    display: block;
+}
