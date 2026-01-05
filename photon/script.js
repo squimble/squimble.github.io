@@ -15,7 +15,7 @@ var gameData ={
 var randData ={
   wavelengthMod: 0.5,
 }
-
+//doodle boogle recommittt
 function fireE(){
   gameData.electrons += gameData.electronBeamNum;
   gameData.photons += Math.abs(gameData.atoms-gameData.electrons)
