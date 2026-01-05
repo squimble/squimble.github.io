@@ -35,7 +35,7 @@ function fireE(){
 }
 //sorry guys its for aesthetic
 const canvas = document.getElementById("pointCanvas");
-const ctx = canvas.getContext("2d");
+const ctx = canvas.getContext('2d');
 
 // Set canvas dimensions
 canvas.width = 200; // Match CSS width
