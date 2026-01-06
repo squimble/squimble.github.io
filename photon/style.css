@@ -3,50 +3,8 @@ body {
     font-family: sans-serif;
 }
 
-/* Sidebar on the right */
-.sidebar-container {
-    width: 180px; /* Set the width of your sidebar */
-    position: fixed; /* Fixes the sidebar to the viewport */
-    right: 0; /* Positions the sidebar on the right */
-    top: 0;
-    height: 100%; /* Makes the sidebar full height */
-    background-color: #0e1533;
-    overflow: hidden; /* Hides points that go outside the canvas area */
-    box-shadow: -4px 0 8px rgba(0,0,0,0.2);
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-}
+/* i hate copilot */
 
-/* make the canvas fill the sidebar */
-.sidebar-container canvas {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
-/* push the main content left so it doesn't sit under the sidebar */
-.main {
-    margin-right: 180px; /* Same width as sidebar to prevent overlap */
-    padding: 20px;
-    min-height: 100vh;
-}
-
-.photonview {
-    position: fixed;
-    left: 10px;
-    top: 10px;
-    width: 200px;
-    height: calc(100vh - 20px);
-}
-
-#photonss {
-    display: block;
-    width: 200px;
-    height: 100%;
-}
-
-/* optional: ensure money and buttons look decent */
 #money {
     font-family: monospace;
 }
