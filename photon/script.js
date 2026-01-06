@@ -11,11 +11,12 @@ var gameData ={
   power: 10,
   electronBeamNum: 1,
   tierbonus: 1,
+  
 }
 var randData ={
   wavelengthMod: 0.5,
 }
-
+//asbjdshjdbjuah
 function fireE(){
   gameData.electrons += gameData.electronBeamNum;
   for (let i = 0; i < gameData.electrons-gameData.atoms; i++){
