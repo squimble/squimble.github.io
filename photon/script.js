@@ -25,6 +25,7 @@ function fireE(){
   
     const wavelength = Math.floor(randData.wavelengthMod * Math.random() * (max - min + 1)) + min;
     gameData.money += wavelength * gameData.atoms/randData.wavelengthMod * gameData.power * gameData.tierbonus
+    document.getElementById("money").innerHTML= "$" + gameData.money
     
   }
 
