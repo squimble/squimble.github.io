@@ -1,16 +1,17 @@
+
+@font-face {
+
+    font-family: 'Azeret Mono';
+    font-weight: 500;
+    font-style: italic;
+
+}
+
 body {
     margin: 2rem;
     font-family: sans-serif;
 }
 /* what in the git push */
-
-
-.azeret-mono-<uniquifier> {
-  font-family: "Azeret Mono", monospace;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: italicized;
-}
 
 /* i hate copilot */
 
