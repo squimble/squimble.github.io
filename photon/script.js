@@ -26,6 +26,8 @@ function fireE(){
     gameData.money += wavelength * gameData.atoms/randData.wavelengthMod * gameData.power * gameData.tierbonus
     
   }
+
   
+}
   
   
