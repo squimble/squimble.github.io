@@ -3,8 +3,17 @@ body {
     font-family: sans-serif;
 }
 
+
+
+.azeret-mono-<uniquifier> {
+  font-family: "Azeret Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: italicized;
+}
+
 /* i hate copilot */
 
 #money {
-    font-family: monospace;
+    font-family: "Azeret Mono";
 }
