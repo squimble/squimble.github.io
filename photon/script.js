@@ -29,7 +29,7 @@ function fireE(){
     
   }
 function buyhyd(){
-  if gameData.money >= 100000 { 
+  if (gameData.money >= 100000) { 
     gameData.money -= 100000
     gameData.atoms += 1
     gameData.hydrogen += 1
