@@ -206,6 +206,8 @@ function unlockDHC6(){
     gameData.cessna150-=600
     gameData.airplanes-=1100
     document.getElementById("count").innerHTML= gameData.airplanes+" Airplanes"
+      document.getElementById("cessna172").innerHTML= gameData.cessna172+" Cessna 172s"
+      document.getElementById("cessna150").innerHTML= gameData.cessna150+" Cessna 150s"
     }
   }
 }
@@ -296,7 +298,7 @@ var saveGameLoop = window.setInterval(function() {
   saveData.aQuantity = 0; // Set a default value
   }
 
-var savegame = JSON.parse(localStorage.getItem("planes"))
+var saveGame = JSON.parse(localStorage.getItem("planes"))
 
 if (saveGame !== null) {
   gameData = saveGame
