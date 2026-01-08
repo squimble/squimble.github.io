@@ -13,6 +13,7 @@ var gameData ={
   tierbonus: 1,
   
 }
+///commmmitsssssss pleassseee
 var randData ={
   wavelengthMod: 0.5,
 }
