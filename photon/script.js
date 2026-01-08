@@ -29,14 +29,14 @@ function fireE(){
     document.getElementById("money").innerHTML= "$" + gameData.money
     
   }
+
+  //hdsjbgrbwshdkj,f
+}
 function buyhyd(){
   if (gameData.money >= 100000) { 
     gameData.money -= 100000
     gameData.atoms += 1
     gameData.hydrogen += 1
   }
-}
-  //hdsjbgrbwshdkj,f
-}
-  
+} 
   
