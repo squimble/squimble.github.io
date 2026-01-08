@@ -37,6 +37,17 @@ function buyhyd(){
     gameData.money -= 100000
     gameData.atoms += 1
     gameData.hydrogen += 1
+    document.getElementById("count").innerHTML= gameData.atoms + " Atoms"
+    document.getElementById("money").innerHTML= "$" + gameData.money
+    document.getElementById("hydrogen").innerHTML= gameData.hydrogen + " Hydrogen Atoms"
   }
 } 
-  
+function buyhel(){
+  if (gameData.money >= 100000) { 
+    gameData.money -= 1000000
+    gameData.atoms += 1
+    gameData.helium += 1
+    document.getElementById("count").innerHTML= gameData.atoms + " Atoms"
+    document.getElementById("money").innerHTML= "$" + gameData.money
+    document.getElementById("helium").innerHTML= gameData.helium + " Helium Atoms"
+  }  
