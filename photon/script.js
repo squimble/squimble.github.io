@@ -11,7 +11,8 @@ var gameData ={
   power: 10,
   electronBeamNum: 1,
   tierbonus: 1,
-  
+  maximumminl:410,
+  maximummaxl: 656,
 }
 ///commmmitsssssss pleassseee
 var randData ={
@@ -21,11 +22,13 @@ var randData ={
 function fireE(){
   gameData.electrons += gameData.electronBeamNum;
   for (let i = 0; i < gameData.electrons-gameData.atoms; i++){
-    const min = 380;
-    const max = 780;
+    const min = gameData.maximumminl;
+    const max = gameData.maximummaxl;
   
     const wavelength = Math.floor(randData.wavelengthMod * Math.random() * (max - min + 1)) + min;
+    document.getElementById("wvd").innerHTML=wavelength+" nm"
     gameData.money += wavelength * gameData.atoms/randData.wavelengthMod * gameData.power * gameData.tierbonus
+    document.getElementById("deltamoney").innerHTML= "+$"+ (wavelength * gameData.atoms/randData.wavelengthMod * gameData.power * gameData.tierbonus)
     document.getElementById("money").innerHTML= "$" + gameData.money
     
   }
@@ -48,6 +51,8 @@ function buyhel(){
     gameData.money -= 1000000
     gameData.atoms += 1
     gameData.helium += 1
+    gameData.maximumminl = 388
+    gameData.maximummaxl = 781
    
   }
    document.getElementById("count").innerHTML= gameData.atoms + " Atoms"
