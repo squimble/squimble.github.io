@@ -13,6 +13,8 @@ var gameData ={
   tierbonus: 1,
   maximumminl:410,
   maximummaxl: 656,
+  hydcost:100000,
+  helcost:175000,
 }
 ///commmmitsssssss pleassseee
 var randData ={
@@ -36,10 +38,11 @@ function fireE(){
   //hdsjbgrbwshdkj,f
 }
 function buyhyd(){
-  if (gameData.money >= 100000) { 
-    gameData.money -= 100000
+  if (gameData.money >= gameData.hydcost) { 
+    gameData.money -= gameData.hydcost
     gameData.atoms += 1
     gameData.hydrogen += 1
+    gameData.hydcost += gameData.hydcost*(randData.wavelengthMod+1)
 
   }
       document.getElementById("count").innerHTML= gameData.atoms + " Atoms"
@@ -51,6 +54,8 @@ function buyhel(){
     gameData.money -= 1000000
     gameData.atoms += 1
     gameData.helium += 1
+    gameData.helcost += gameData.helcost*(randData.wavelengthMod+1)
+
     gameData.maximumminl = 388
     gameData.maximummaxl = 781
    
