@@ -90,7 +90,7 @@ function buyxen(){
     gameData.money -= gameData.xencost
     gameData.atoms += 1
     gameData.xenon += 1
-    gamedata.xencost += gameData.xencost*(randData.wavelengthMod+1)
+    gameData.xencost += gameData.xencost*(randData.wavelengthMod+1)
 
     gameData.maximumminl = 350
     gameData.minimummaxl = 1100
