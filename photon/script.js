@@ -14,7 +14,8 @@ var gameData ={
   maximumminl:410,
   maximummaxl: 656,
   hydcost:100000,
-  helcost:175000,
+  helcost:1750000,
+  argcost;10000000,
 }
 ///commmmitsssssss pleassseee
 var randData ={
@@ -52,8 +53,8 @@ function buyhyd(){
     document.getElementById("buyhyd").innerHTML= "Buy 1 Hydrogen Atom for $" + gameData.hydcost
 } 
 function buyhel(){
-  if (gameData.money >= 175000) { 
-    gameData.money -= 175000
+  if (gameData.money >= gameData.helcost) { 
+    gameData.money -= gameData.helcost
     gameData.atoms += 1
     gameData.helium += 1
     gameData.helcost += gameData.helcost*(randData.wavelengthMod+1)
@@ -67,7 +68,22 @@ function buyhel(){
     document.getElementById("helium").innerHTML= gameData.helium + " Helium Atoms"
     document.getElementById("buyhel").innerHTML= "Buy 1 Helium Atom for $" + gameData.helcost
 }
+function buyarg(){
+  if (gameData.money >= gameData.argcost) {
+    gameData.money -= gameData.argcost
+    gameData.atoms += 1
+    gameData.argon += 1
+    gameData.argcost += gameData.argcost*(randata.wavelengthMod+1)
 
+    gameData.maximumminl = 351
+    gameData.minimummaxl = 810
+    
+  }
+   document.getElementById("count").innerHTML= gameData.atoms + " Atoms"
+    document.getElementById("money").innerHTML= "$" + gameData.money
+    document.getElementById("argon").innerHTML= gameData.argon + " Argon Atoms"
+    document.getElementById("buyarg").innerHTML= "Buy 1 Argon Atom for $" + gameData.argcost
+}
 window.setInterval(function(){
   randData.wavelengthMod=Math.random()
 },100)
