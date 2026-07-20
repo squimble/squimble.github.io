@@ -16,6 +16,7 @@ var gameData ={
   hydcost:100000,
   helcost:1750000,
   argcost:10000000,
+  xencost:20000000,
 }
 ///commmmitsssssss pleassseee
 var randData ={
@@ -83,6 +84,21 @@ function buyarg(){
     document.getElementById("money").innerHTML= "$" + gameData.money
     document.getElementById("argon").innerHTML= gameData.argon + " Argon Atoms"
     document.getElementById("buyarg").innerHTML= "Buy 1 Argon Atom for $" + gameData.argcost
+}
+function buyxen(){
+  if (gameData.money >= gameData.xencost){
+    gameData.money -= gameData.xencost
+    gameData.atoms += 1
+    gameData.xenon += 1
+    gamedata.xencost += gameData.xencost*(randData.wavelengthMod+1)
+
+    gameData.maximumminl = 350
+    gameData.minimummaxl = 1100
+  }
+  document.getElementById("count").innerHTML= gameData.atoms + " Atoms"
+    document.getElementById("money").innerHTML= "$" + gameData.money
+    document.getElementById("xenon").innerHTML= gameData.xenon + " Xenon Atoms"
+    document.getElementById("buyxen").innerHTML= "Buy 1 Xenon Atom for $" + gameData.xencost
 }
 window.setInterval(function(){
   randData.wavelengthMod=Math.random()
