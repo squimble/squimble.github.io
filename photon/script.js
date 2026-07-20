@@ -49,6 +49,7 @@ function buyhyd(){
       document.getElementById("count").innerHTML= gameData.atoms + " Atoms"
     document.getElementById("money").innerHTML= "$" + gameData.money
     document.getElementById("hydrogen").innerHTML= gameData.hydrogen + " Hydrogen Atoms"
+    document.getElementById("buyhyd").innerHTML= "Buy 1 Hydrogen Atom for $"+gameData.hydcost
 } 
 function buyhel(){
   if (gameData.money >= 175000) { 
@@ -64,6 +65,7 @@ function buyhel(){
    document.getElementById("count").innerHTML= gameData.atoms + " Atoms"
     document.getElementById("money").innerHTML= "$" + gameData.money
     document.getElementById("helium").innerHTML= gameData.helium + " Helium Atoms"
+    document.getElementById("buyhel").innerHTML= "Buy 1 Helium Atom for $"+gameData.helcost
 }
 
 window.setInterval(function(){
