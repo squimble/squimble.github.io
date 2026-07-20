@@ -15,7 +15,7 @@ var gameData ={
   maximummaxl: 656,
   hydcost:100000,
   helcost:1750000,
-  argcost;10000000,
+  argcost:10000000,
 }
 ///commmmitsssssss pleassseee
 var randData ={
