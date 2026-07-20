@@ -73,7 +73,7 @@ function buyarg(){
     gameData.money -= gameData.argcost
     gameData.atoms += 1
     gameData.argon += 1
-    gameData.argcost += gameData.argcost*(randata.wavelengthMod+1)
+    gameData.argcost += gameData.argcost*(randData.wavelengthMod+1)
 
     gameData.maximumminl = 351
     gameData.minimummaxl = 810
