@@ -4,6 +4,7 @@ var gameData ={
   helium: 0,
   argon: 0,
   xenon: 0,
+  neon: 0,
   atoms: 1,
   mocvdUnlocked: 0,
   tier: 1,  
