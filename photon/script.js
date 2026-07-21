@@ -112,7 +112,7 @@ function buyneo(){
     gameData.money -= gameData.neocost
     gameData.atoms += 1
     gameData.neon += 1
-    gameData.neocost += gamedata.neocost*(randData.wavelengthMod+1)
+    gameData.neocost += gameData.neocost*(randData.wavelengthMod+1)
     gameData.maximumminl = 350
     gameData.minimummaxl = 1100
     document.getElementById("tier1").style.display="inline"
