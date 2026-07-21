@@ -122,6 +122,12 @@ function buyneo(){
     document.getElementById("buyneo").innerHTML= "Buy 1 Neon Atom for $" + gameData.neocost
     document.getElementById("tier1").style.display="inline"
 }
+function mhydlamp(){
+  if (gameData.hydrogen >= 30){
+    gameData.hydrogen -= 30
+    gameData.hydlamps += 1
+  }
+}
 function tier1(){
   if (gameData.neon >= 5){
     gameData.tier = 1
@@ -157,9 +163,23 @@ function tier1(){
   document.getElementById("hydrogen").innerHTML= gameData.hydrogen + " Hydrogen Atoms"
     document.getElementById("buyhyd").innerHTML= "Buy 1 Hydrogen Atom for $" + gameData.hydcost
    document.getElementById("deltamoney").innerHTML= "+$"+ (wavelength * gameData.atoms/randData.wavelengthMod * gameData.power * gameData.tierbonus)
+  document.getElementById("hydlamps").style.display="inline"
+  document.getElementById("tier1").style.display="none"
   
 }
 window.setInterval(function(){
   randData.wavelengthMod=Math.random()
 },100)
+window.setInterval(function(){
+  if (gameData.hydlamps >= 1){
+     for (let i = 0; i < gameData.hydlamps; i++){
+    const min = 410;
+    const max = 656;
   
+    const wavelength = Math.floor(randData.wavelengthMod * Math.random() * (max - min + 1)) + min;
+    document.getElementById("wvd").innerHTML=wavelength+" nm"
+    gameData.money += wavelength * gameData.atoms/randData.wavelengthMod * gameData.power * gameData.tierbonus
+    document.getElementById("deltamoney").innerHTML= "+$"+ (wavelength * gameData.atoms/randData.wavelengthMod * gameData.power * gameData.tierbonus)
+    document.getElementById("money").innerHTML= "$" + gameData.money
+  }
+},500)
