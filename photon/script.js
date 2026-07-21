@@ -182,5 +182,6 @@ window.setInterval(function(){
     gameData.money += wavelength * gameData.atoms/randData.wavelengthMod * gameData.power * gameData.tierbonus
     document.getElementById("deltamoney").innerHTML= "+$"+ (wavelength * gameData.atoms/randData.wavelengthMod * gameData.power * gameData.tierbonus)
     document.getElementById("money").innerHTML= "$" + gameData.money
-  }
+    }
+  }  
 },500)
