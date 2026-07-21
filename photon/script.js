@@ -127,6 +127,7 @@ function mhydlamp(){
     gameData.hydrogen -= 30
     gameData.hydlamps += 1
   }
+   document.getElementById("hydrogen").innerHTML= gameData.hydrogen + " Hydrogen Atoms"
 }
 function tier1(){
   if (gameData.neon >= 5){
