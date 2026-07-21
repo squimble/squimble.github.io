@@ -177,6 +177,11 @@ function tier1(){
 }
 window.setInterval(function(){
   randData.wavelengthMod=Math.random()
+  localStorage.setItem("savedata", JSON.stringify(gameData))
+  var savegame = JSON.parse(localStorage.getItem("savedata"))
+  if (savegame !== null) {
+  gameData = savegame
+}        
 },100)
 window.setInterval(function(){
   if (gameData.hydlamps >= 1){
