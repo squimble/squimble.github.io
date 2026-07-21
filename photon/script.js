@@ -115,12 +115,12 @@ function buyneo(){
     gameData.neocost += gamedata.neocost*(randData.wavelengthMod+1)
     gameData.maximumminl = 350
     gameData.minimummaxl = 1100
+    document.getElementById("tier1").style.display="inline"
   }
   document.getElementById("count").innerHTML= gameData.atoms + " Atoms"
     document.getElementById("money").innerHTML= "$" + gameData.money
     document.getElementById("neon").innerHTML= gameData.neon + " Neon Atoms"
     document.getElementById("buyneo").innerHTML= "Buy 1 Neon Atom for $" + gameData.neocost
-    document.getElementById("tier1").style.display="inline"
 }
 function mhydlamp(){
   if (gameData.hydrogen >= 30){
@@ -154,18 +154,18 @@ function tier1(){
     document.getElementById("count").innerHTML= gameData.atoms + " Atoms"
     document.getElementById("money").innerHTML= "$" + gameData.money
     document.getElementById("neon").innerHTML= gameData.neon + " Neon Atoms"
-   document.getElementById("xenon").innerHTML= gameData.xenon + " Xenon Atoms"
+    document.getElementById("xenon").innerHTML= gameData.xenon + " Xenon Atoms"
     document.getElementById("buyxen").innerHTML= "Buy 1 Xenon Atom for $" + gameData.xencost
-  document.getElementById("buyneo").innerHTML= "Buy 1 Neon Atom for $" + gameData.neocost
-  document.getElementById("argon").innerHTML= gameData.argon + " Argon Atoms"
+    document.getElementById("buyneo").innerHTML= "Buy 1 Neon Atom for $" + gameData.neocost
+    document.getElementById("argon").innerHTML= gameData.argon + " Argon Atoms"
     document.getElementById("buyarg").innerHTML= "Buy 1 Argon Atom for $" + gameData.argcost
-   document.getElementById("helium").innerHTML= gameData.helium + " Helium Atoms"
+    document.getElementById("helium").innerHTML= gameData.helium + " Helium Atoms"
     document.getElementById("buyhel").innerHTML= "Buy 1 Helium Atom for $" + gameData.helcost
-  document.getElementById("hydrogen").innerHTML= gameData.hydrogen + " Hydrogen Atoms"
+    document.getElementById("hydrogen").innerHTML= gameData.hydrogen + " Hydrogen Atoms"
     document.getElementById("buyhyd").innerHTML= "Buy 1 Hydrogen Atom for $" + gameData.hydcost
-   document.getElementById("deltamoney").innerHTML= "+$"+ (wavelength * gameData.atoms/randData.wavelengthMod * gameData.power * gameData.tierbonus)
-  document.getElementById("hydlamps").style.display="inline"
-  document.getElementById("tier1").style.display="none"
+    document.getElementById("deltamoney").innerHTML= "+$"+ (wavelength * gameData.atoms/randData.wavelengthMod * gameData.power * gameData.tierbonus)
+    document.getElementById("hydlamps").style.display="inline"
+    document.getElementById("tier1").style.display="none"
   
 }
 window.setInterval(function(){
