@@ -7,7 +7,7 @@ var gameData ={
   neon: 0,
   atoms: 1,
   mocvdUnlocked: 0,
-  tier: 1,  
+  tier: 0,  
   electrons: 0,
   power: 10,
   electronBeamNum: 1,
@@ -19,6 +19,11 @@ var gameData ={
   argcost:10000000,
   xencost:20000000,
   neocost:1000000000,
+  hydlamps:0,
+  hellamps:0,
+  arglamps:0,
+  xenlamps:0,
+  neolamps:0,
 }
 ///commmmitsssssss pleassseee
 var randData ={
@@ -115,6 +120,44 @@ function buyneo(){
     document.getElementById("money").innerHTML= "$" + gameData.money
     document.getElementById("neon").innerHTML= gameData.neon + " Neon Atoms"
     document.getElementById("buyneo").innerHTML= "Buy 1 Neon Atom for $" + gameData.neocost
+    document.getElementById("tier1").style.display="inline"
+}
+function tier1(){
+  if (gameData.neon >= 5){
+    gameData.tier = 1
+    gameData.money = 0
+    gameData.atoms = 1 
+    gameData.hydrogen = 1
+    gameData.helium = 0
+    gameData.argon = 0
+    gameData.xenon = 0
+    gameData.neon = 0
+    gameData.power * 2 
+    gameData.tierbonus * 2
+    gameData.electronBeamNum = 1
+    gameData.maximumminl = 410
+    gameData.minimummaxl = 656
+    gameData.hydcost = 100000
+    gameData.helcost = 1750000
+    gameData.argcost = 10000000
+    gameData.xencost = 20000000
+    gameData.neocost = 1000000000
+  
+  }
+    document.getElementById("count").innerHTML= gameData.atoms + " Atoms"
+    document.getElementById("money").innerHTML= "$" + gameData.money
+    document.getElementById("neon").innerHTML= gameData.neon + " Neon Atoms"
+   document.getElementById("xenon").innerHTML= gameData.xenon + " Xenon Atoms"
+    document.getElementById("buyxen").innerHTML= "Buy 1 Xenon Atom for $" + gameData.xencost
+  document.getElementById("buyneo").innerHTML= "Buy 1 Neon Atom for $" + gameData.neocost
+  document.getElementById("argon").innerHTML= gameData.argon + " Argon Atoms"
+    document.getElementById("buyarg").innerHTML= "Buy 1 Argon Atom for $" + gameData.argcost
+   document.getElementById("helium").innerHTML= gameData.helium + " Helium Atoms"
+    document.getElementById("buyhel").innerHTML= "Buy 1 Helium Atom for $" + gameData.helcost
+  document.getElementById("hydrogen").innerHTML= gameData.hydrogen + " Hydrogen Atoms"
+    document.getElementById("buyhyd").innerHTML= "Buy 1 Hydrogen Atom for $" + gameData.hydcost
+   document.getElementById("deltamoney").innerHTML= "+$"+ (wavelength * gameData.atoms/randData.wavelengthMod * gameData.power * gameData.tierbonus)
+  
 }
 window.setInterval(function(){
   randData.wavelengthMod=Math.random()
