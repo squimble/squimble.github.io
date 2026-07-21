@@ -130,6 +130,10 @@ function mhydlamp(){
     gameData.hydlamps += 1
   }
    document.getElementById("hydrogen").innerHTML= gameData.hydrogen + " Hydrogen Atoms"
+   document.getElementById("hydlamps").innerHTML = gameData.hydlamps +" Hydrogen Lamps"
+   document.getElementById("count").innerHTML= gameData.atoms + " Atoms"
+   document.getElementById("lampcount").innerHTML = (gameData.hydlamps+gameData.hellamps+gameData.argLamps+gameData.xenlamps+gameData.neolamps)+" Lamps"
+  
 }
 function tier1(){
   if (gameData.neon >= 5){
