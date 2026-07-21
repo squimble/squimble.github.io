@@ -18,6 +18,7 @@ var gameData ={
   helcost:1750000,
   argcost:10000000,
   xencost:20000000,
+  neocost:1000000000,
 }
 ///commmmitsssssss pleassseee
 var randData ={
@@ -100,6 +101,20 @@ function buyxen(){
     document.getElementById("money").innerHTML= "$" + gameData.money
     document.getElementById("xenon").innerHTML= gameData.xenon + " Xenon Atoms"
     document.getElementById("buyxen").innerHTML= "Buy 1 Xenon Atom for $" + gameData.xencost
+}
+function buyneo(){
+  if (gameData.money >= gameData.neocost){
+    gameData.money -= gameData.neocost
+    gameData.atoms += 1
+    gameData.neon += 1
+    gameData.neocost += gamedata.neocost*(randData.wavelengthMod+1)
+    gameData.maximumminl = 350
+    gameData.minimummaxl = 1100
+  }
+  document.getElementById("count").innerHTML= gameData.atoms + " Atoms"
+    document.getElementById("money").innerHTML= "$" + gameData.money
+    document.getElementById("neon").innerHTML= gameData.neon + " Neon Atoms"
+    document.getElementById("buyneo").innerHTML= "Buy 1 Neon Atom for $" + gameData.neocost
 }
 window.setInterval(function(){
   randData.wavelengthMod=Math.random()
