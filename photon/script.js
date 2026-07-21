@@ -24,6 +24,7 @@ var gameData ={
   arglamps:0,
   xenlamps:0,
   neolamps:0,
+  currentwv:0
 }
 ///commmmitsssssss pleassseee
 var randData ={
@@ -38,6 +39,7 @@ function fireE(){
     const max = gameData.maximummaxl;
   
     const wavelength = Math.floor(randData.wavelengthMod * Math.random() * (max - min + 1)) + min;
+    gameData.currentwv=wavelength
     document.getElementById("wvd").innerHTML=wavelength+" nm"
     gameData.money += wavelength * gameData.atoms/randData.wavelengthMod * gameData.power * gameData.tierbonus
     document.getElementById("deltamoney").innerHTML= "+$"+ (wavelength * gameData.atoms/randData.wavelengthMod * gameData.power * gameData.tierbonus)
@@ -115,7 +117,7 @@ function buyneo(){
     gameData.neocost += gameData.neocost*(randData.wavelengthMod+1)
     gameData.maximumminl = 350
     gameData.minimummaxl = 1100
-    document.getElementById("tier1").style.display="inline"
+    
   }
   document.getElementById("count").innerHTML= gameData.atoms + " Atoms"
     document.getElementById("money").innerHTML= "$" + gameData.money
@@ -163,7 +165,7 @@ function tier1(){
     document.getElementById("buyhel").innerHTML= "Buy 1 Helium Atom for $" + gameData.helcost
     document.getElementById("hydrogen").innerHTML= gameData.hydrogen + " Hydrogen Atoms"
     document.getElementById("buyhyd").innerHTML= "Buy 1 Hydrogen Atom for $" + gameData.hydcost
-    document.getElementById("deltamoney").innerHTML= "+$"+ (wavelength * gameData.atoms/randData.wavelengthMod * gameData.power * gameData.tierbonus)
+    document.getElementById("deltamoney").innerHTML= "+$"+ (gameData.currentwv * gameData.atoms/randData.wavelengthMod * gameData.power * gameData.tierbonus)
     document.getElementById("hydlamps").style.display="inline"
     document.getElementById("tier1").style.display="none"
   
