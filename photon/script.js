@@ -166,7 +166,8 @@ function tier1(){
     document.getElementById("hydrogen").innerHTML= gameData.hydrogen + " Hydrogen Atoms"
     document.getElementById("buyhyd").innerHTML= "Buy 1 Hydrogen Atom for $" + gameData.hydcost
     document.getElementById("deltamoney").innerHTML= "+$"+ (gameData.currentwv * gameData.atoms/randData.wavelengthMod * gameData.power * gameData.tierbonus)
-    document.getElementById("hydlamps").style.display="inline"
+    document.getElementById("hydlamp").style.display="inline"
+    document.getElementById("lampdiv").style.display="inline"
     document.getElementById("tier1").style.display="none"
   
 }
